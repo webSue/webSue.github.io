@@ -16,32 +16,5 @@
       <description></description>
     </item>
     
-    <item>
-      <title>Test</title>
-      <link>https://websue.github.io/post/tools/test22/</link>
-      <pubDate>Mon, 26 Jun 2023 22:53:18 +0800</pubDate>
-      
-      <guid>https://websue.github.io/post/tools/test22/</guid>
-      <description>hello，world </description>
-    </item>
-    
-    <item>
-      <title>关于我</title>
-      <link>https://websue.github.io/post/about/</link>
-      <pubDate>Tue, 10 Mar 2015 00:13:27 +0000</pubDate>
-      
-      <guid>https://websue.github.io/post/about/</guid>
-      <description>《Go 实战笔记》系列作者，《Golang Gin 实战》系列作者，《Android Gradle权威指南》作者，现负责技术管理。 Android Gradle权威指南 公众号，扫码关注</description>
-    </item>
-    
-    <item>
-      <title>归档</title>
-      <link>https://websue.github.io/post/archives/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://websue.github.io/post/archives/</guid>
-      <description></description>
-    </item>
-    
   </channel>
 </rss>

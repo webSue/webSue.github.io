@@ -20,9 +20,9 @@ disqusShortname = "yourdiscussshortname"  ## 是否开启disqus评论，不要�
 
 [params]
   author = "webSue"
-  subtitle = "Interested in Java、software development、search engine、system design and so on"
-  keywords = "Java,java,android,博客,python,软件架构"
-  description = "专注于IT互联网，包括但不限于Java、Android、Python、软件架构等"
+  subtitle = "创造生活的方式"
+  keywords = "blog,java,阅读,博客,python,软件架构,code,programming"
+  description = "This is the way the world ends. Not with a bang but a whimper."
   busuanzi = true #启用不算子网页统计
   googleAd = ""  #ca-pub-xxxxxxxxxxxxxx
   localSearch = true # 启用本地搜索
@@ -88,20 +88,39 @@ disqusShortname = "yourdiscussshortname"  ## 是否开启disqus评论，不要�
 
 [menu]
 
-  [[menu.main]]
-    identifier = "tools"
-    name = "工具"
-    url = "/tools/"
-    weight = 2
+##   [[menu.main]]
+##     identifier = "reading"
+##     name = "读书"
+##     url = "/reading/"
+##     weight = 2
+
+##  [[menu.main]]
+##    identifier = "nonsense"
+##    name = "杂谈"
+##    url = "/nonsense/"
+##    weight = 3
 
   [[menu.main]]
     identifier = "archives"
     name = "归档"
     url = "/archives/"
-    weight = 3
+    weight = 4
 
   [[menu.main]]
     identifier = "about"
-    name = "关于"
+    name = "关于我"
     url = "/about/"
-    weight = 4
+    weight = 5
+
+## 评论支持
+[params.utteranc]
+enable = true
+repo = ""    # 存储评论的Repo，格式为 owner/repo
+issueTerm = "pathname"  #表示你选择以那种方式让github issue的评论和你的文章关联。
+theme = "github-light" # 样式主题，有github-light和github-dark两种
+
+## tag分类
+[taxonomies]
+  tag = "tags"
+  series = "series"
+  category = "categories"
