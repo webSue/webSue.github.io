@@ -9,20 +9,20 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
     
 
-    <title>个人博客建站指南（一）——如何拥有一间属于自己的赛博房间 | webSue的博客</title>
-    <meta property="og:title" content="个人博客建站指南（一）——如何拥有一间属于自己的赛博房间 - webSue的博客">
+    <title>阅读的意义 | webSue的博客</title>
+    <meta property="og:title" content="阅读的意义 - webSue的博客">
     <meta property="og:type" content="article">
         
-    <meta property="article:published_time" content='2023-07-17T21:48:59&#43;08:00'>
+    <meta property="article:published_time" content='2023-07-19T21:04:16&#43;08:00'>
         
         
-    <meta property="article:modified_time" content='2023-07-17T21:48:59&#43;08:00'>
+    <meta property="article:modified_time" content='2023-07-19T21:04:16&#43;08:00'>
         
-    <meta name="Keywords" content="[hugo github 建站 博客]">
-    <meta name="description" content="个人博客建站指南（一）——如何拥有一间属于自己的赛博房间">
+    <meta name="Keywords" content="[reading book 阅读]">
+    <meta name="description" content="阅读的意义">
         
     <meta name="author" content="webSue">
-    <meta property="og:url" content="https://websue.github.io/post/tech/%E5%A6%82%E4%BD%95%E6%8B%A5%E6%9C%89%E4%B8%80%E9%97%B4%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E8%B5%9B%E5%8D%9A%E6%88%BF%E9%97%B4%E5%BB%BA%E7%AB%99%E6%8C%87%E5%8D%97%E4%B8%80/">
+    <meta property="og:url" content="https://websue.github.io/post/reading/%E9%98%85%E8%AF%BB%E7%9A%84%E6%84%8F%E4%B9%89/">
     <link rel="shortcut icon" href='/favicon.ico'  type="image/x-icon">
 
     <link rel="stylesheet" href='/css/normalize.css'>
@@ -43,7 +43,7 @@
 
 <body>
     <header id="header" class="clearfix" >
-    <meta content="hugo, github, 建站, 博客" name="keywords">
+    <meta content="reading, book, 阅读" name="keywords">
     <div class="container">
         <div class="col-group">
             <div class="site-name ">
@@ -139,22 +139,7 @@
 <div class="post-toc" style="position: absolute; top: 188px;">
     <h2 class="post-toc-title">Table of Contents</h2>
     <div class="post-toc-content">
-        <nav id="TableOfContents">
-  <ul>
-    <li><a href="#1为什么需要一个独立博客">1.为什么需要一个独立博客</a></li>
-    <li><a href="#2方案选取">2.方案选取</a>
-      <ul>
-        <li><a href="#1自己开发上线维护">1.自己开发上线维护</a></li>
-        <li><a href="#2wordpress自建站">2.WordPress自建站</a></li>
-        <li><a href="#3站点生成器如hexohugojekyllgithub-pages">3.站点生成器（如Hexo、Hugo、Jekyll）+Github Pages</a></li>
-        <li><a href="#4第三方托管建站平台建站程序如wordpresscom">4.第三方托管建站平台/建站程序（如wordpress.com）</a></li>
-        <li><a href="#5notion">5.Notion</a></li>
-      </ul>
-    </li>
-    <li><a href="#3为什么推荐hugogithub-pages静态生成">3.为什么推荐Hugo+Github Pages静态生成</a></li>
-    <li><a href="#4写在后面">4.写在后面</a></li>
-  </ul>
-</nav>
+        <nav id="TableOfContents"></nav>
     </div>
 </div>
 <script type="text/javascript">
@@ -190,18 +175,18 @@
 </script>
     <article class="post">
         <header>
-            <h1 class="post-title">个人博客建站指南（一）——如何拥有一间属于自己的赛博房间</h1>
+            <h1 class="post-title">阅读的意义</h1>
         </header>
         
-  <time datetime="2023-07-17T13:48:59Z" class="post-meta meta-date dt-published">
-    2023-07-17
+  <time datetime="2023-07-19T13:04:16Z" class="post-meta meta-date dt-published">
+    2023-07-19
   </time>
 
 
 <div class="post-meta meta-category">
   <span>&nbsp;|</span>
   
-    <a href='/categories/tech' target="_blank">tech</a>
+    <a href='/categories/reading' target="_blank">reading</a>
   
 </div>
 
@@ -215,80 +200,30 @@
         
         
         <div class="post-content">
-            <h2 id="1为什么需要一个独立博客">1.为什么需要一个独立博客</h2>
-<p>记得伍尔芙在《一间只属于自己的房间》里写道“<strong>A woman must have money and a room of her own if she is to write fiction.</strong>”（女性要想写小说，必须有钱，再加一间自己的房间），意在阐述基本的物质条件和私有且安静的空间对写作的必要性。</p>
-<p>在如今的互联网上，充斥着碎片化的信息与各式各样的禁锢限制，个人博客或许从某种意义上能给予我们一间只属于的赛博房间。在这个空间里，我们拥有最大限度的自由，能尽可能完整且详细得记录与展示。so对我这样的表达欲旺盛者十分友好</p>
-<p>如果你也对拥有一间只属于自己的赛博房间感兴趣，不如考虑也来搭建一个独立博客吧！</p>
-<h2 id="2方案选取">2.方案选取</h2>
-<p>大致汇总下目前市面上常见的博客建站方式：纯自己开发上线维护、WordPress自建站、站点生成器（如Hexo、Hugo、Jekyll）+Github Pages、第三方托管建站平台/建站程序（如wordpress.com、Typecho）、Notion。</p>
-<p>嫌下面文字太长省流不看版：除了对git操作毫无了解只是想先培养写作习惯的朋友推荐notion外，其他一律无脑推荐 站点生成器静态生成+Github Pages（不想翻墙担心网络不稳定的可以考虑Gitee Pages）。</p>
-<p>接下来分别说说每种方案的优劣势：</p>
-<h3 id="1自己开发上线维护">1.自己开发上线维护</h3>
-<p>最最原始的建站方式，自己开发前后端（或者基于Github上的开源项目做二次开发）、买服务器、上线部署、维护一条龙服务。</p>
-<p>优势是高度可定制化，劣势是太太太麻烦了，极其没有必要。如果是想锻炼自己做项目写代码的能力考虑做个别的吧。单纯为了写博客干这事也过于累赘了。</p>
-<p>但如果你很想这么做，可以基于github开源的halo博客系统搭建，可参考：</p>
-<p><a href="https://sspai.com/post/72257#!">Halo博客建站指南 - 少数派 (sspai.com)</a></p>
+            <blockquote>
+<p>读一些无用的书，做一些无用的事，花一些无用的时间，都是为了在一切已知之外，保留一个超越自己的机会。人生中一些很了不起的变化，都是来自这种时刻。</p>
+<p>​                                                                                                                ——梁文道</p>
+</blockquote>
 <p>
-        <img class="mx-auto" alt="" src="/img/halo.png" />   
+        <img class="mx-auto" alt="" src="/img/reading.jpg" />   
     </p>
-<h3 id="2wordpress自建站">2.WordPress自建站</h3>
-<p>WordPress，在很多自建电商网站、自建主页教程的文章推荐里可以看到，宣传一键式傻瓜操作。但是：</p>
-<ul>
-<li>
-<p>臃肿，WordPress作为一个能提供多种功能搭建非常多样式网站的开源建站平台，博客只是其很小一部分的功能，这就导致有大量多余的服务和代码在占据宝贵的服务器资源。只用模板还好，如果想自己延申定制一些功能就需要翻阅它臃肿的代码</p>
-</li>
-<li>
-<p>费钱且访问速度慢，要自己租服务器，且个人租的小服务器难以提供较好的性能会导致博客文章加载、访问速度受阻</p>
-</li>
-<li>
-<p>并没有宣传的那么傻瓜式，虽然很多服务器供应商提供WordPress一键安装，也有例如宝塔控制面板等帮助进行整体后台操作控制，但毕竟这是一个带数据库的动态服务，不管是初期搭建还是后续的维护，都多多少少要了解接触其中的技术细节，比起按照教程抄下命令就能跑起来的静态生成站对技术的要求更高。</p>
-</li>
-</ul>
-<p>如果听了以上缺点，仍然对使用WordPress自建站感兴趣，可以自行在互联网上搜索相关教程</p>
-<h3 id="3站点生成器如hexohugojekyllgithub-pages">3.站点生成器（如Hexo、Hugo、Jekyll）+Github Pages</h3>
-<p>静态生成Github Pages博客的好处太多啦，比如：</p>
-<ul>
-<li>免费省钱且稳定（github背书保障）</li>
-<li>速度快（因为省去了数据的动态获取过程）</li>
-<li>SEO（静态网站更容易被搜索引擎抓取，稳定排名）</li>
-<li>易维护易上手（对于熟悉git操作的人来说，安装并且顺利跑起来半小时内即可完成，对于git 0基础的话，按教程步骤走也可以几天搞定）</li>
-</ul>
-<p>缺点主要在于一点点的git学习成本（但考虑到以上众多优点，稍微学习下也不是坏事）以及如果没有配置域名而是使用github的username.github.io的地址，会被人顺着github repo找到编辑历史等，私密性不够。</p>
-<p>强烈推荐这一方式，关于使用Github Pages静态生成建站的具体的操作步骤，可见建站指南第二篇：</p>
-<p>
-        <img class="mx-auto" alt="" src="/img/hugo.png" />   
-    </p>
-<h3 id="4第三方托管建站平台建站程序如wordpresscom">4.第三方托管建站平台/建站程序（如wordpress.com）</h3>
-<p>第三方托管平台有免费与付费之分，其共同点是互不兼容，迁移成本高，对于内容的保存仍然要依仗于平台，在我看来某种程度上违背了独立博客建站的初衷。毕竟如果这样可以那么何不直接去大型博客平台上注册个账号开始写呢？</p>
-<p>对于第三方托管平台而言，免费版能提供的模板定制功能有限，拓展度不高。但付费版又不太值得，毕竟我们仅仅是需要博客写作，并非是商业化用途，购买更丰富的功能似乎费钱且难以持续。</p>
-<p>
-        <img class="mx-auto" alt="" src="/img/wordpress.png" />   
-    </p>
-<p>
-        <img class="mx-auto" alt="" src="/img/wordpress2.png" />   
-    </p>
-<h3 id="5notion">5.Notion</h3>
-<p>Notion，一个较为自由的大纲类笔记软件，类似的还有印象笔记和OneNote。Notion的知名度很高（特别是在海外），围绕Notion的第三方生态也非常丰富——插件、建站、小组件、汉化&hellip;&hellip;</p>
-<p>noto（<a href="https://noto.so/">noto.so</a>）、Potion（<a href="https://potion.so/">Create custom Notion websites in minutes (potion.so)</a>）、Super（<a href="https://super.so/">Super — Create Websites with Notion</a>）等Notion建站工具能帮助普通用户使用Notion这款无代码工具快速建立支持SEO的在线网站或者博客，降低了对用户开发/技术能力的要求。</p>
-<p>因此使用Notion做个人博客的最大好处是 非技术人员好上手，特别是如果你原本就有使用notion做笔记的习惯，借助第三方组件也能做出漂亮的排版。</p>
-<p>其不便之处在于，1.notion在国内没有服务器，因为一些众所周知的原因会导致网络不稳定速度慢；2.定制程度有限，要依仗建站工具的迭代更新开发新功能。</p>
-<p>
-        <img class="mx-auto" alt="" src="/img/notion.png" />   
-    </p>
-<p>
-        <img class="mx-auto" alt="" src="/img/noto.png" />   
-    </p>
-<h2 id="3为什么推荐hugogithub-pages静态生成">3.为什么推荐Hugo+Github Pages静态生成</h2>
-<p>目前最主流的静态网站生成器应该是Jekyll、Hugo、Hexo三款。Jekyll历史最悠久，Github Pages默认使用的就是它。Hexo的生态完善，主题功能丰富，很多时候点开一个文章就是Hexo Next主题模板。</p>
-<p>而Hugo，凭借一个“快”字，在一众竞争者里成功吸引到用户。依赖go语言开发，官网上打出的标语是“<strong>The world’s fastest framework for building websites</strong>”。到底有多快呢？根据网络上相关博主提供的数据，200篇左右的博文用Hexo需要10分钟来生成静态网页，而Hugo只需要10秒。具体到我自己的使用过程，最直观的感受是在本地调试非常方便，基本上我在源文件处的修改内容可以实时显示在本地端口的页面上，不需要再次敲代码生成再预览。</p>
-<p>因此，向大家强烈推荐Hugo + Github Pages的方式建站。具体的建站流程见建站指南第二篇：</p>
-<h2 id="4写在后面">4.写在后面</h2>
-<p>之前网上冲浪的时候，刷到过一张将描述博客博文数量和建站文章数量呈反比的图，描述了博客圈最开始兴冲冲写建站文章越多，最后热情消退，实际的博文会很少的现象。当时看见时觉得好笑，终于轮到自己建站了，只希望回旋镖不要打在自己身上，啪啪打脸。</p>
-<p>
-        <img class="mx-auto" alt="" src="/img/Blogging&amp;blogSetups.jpg" />   
-    </p>
-<p>原图地址在这—&gt; <a href="https://rakhim.org/honestly-undefined/19/">Blogging vs. blog setups - Rakhim.org</a></p>
-<p>翻出这张图片与所有建站的朋友们共勉，希望大家都能坚持下来，在这间属于自己的赛博房间里笔耕不辍。</p>
+<p>以下原文写于2019年，记录下以前的（矫情？）文字</p>
+<hr>
+<p>记得高晓松曾说过这样一段话，大意是“我觉得我们这一代人是最幸运的一代人，我们生长在八十年代。在正形成自己世界观的时候，海面上全是灯塔，海面全部被照亮，我们清楚地知道自己要去哪儿，即使后来灯塔都熄灭了，海上一片漆黑，我们也基本知道要到哪个方向”，我们问，为什么要读书？因为我们需要灯塔。</p>
+<p>买一本去阅读其实是世界上门槛最低的高贵举动。我们只要付出一个汉堡的钱，便可以得到一个作者在那段岁月所有的心思和时间。或许我们并不生在高晓松口中的黄金年代，但书籍能带我们回去，即使在这个时代，当你觉得海面上的灯塔熄灭，你茫然不知所措，你可以翻开书，从《枕草子》里悟日常生活里的远近美丑，从《时间简史》里悟宇宙的深远之趣，从《傲慢与偏见》里悟女性的自尊聪慧，你可以洞见世事千年，你可以聆听浮生万语，漆黑的海面上，尼采、康德、海德格尔、黑格尔……他们会告诉你风从哪个方向来，船往哪个方向去。</p>
+<p>我自知浅薄，阅历尚短，没有资格评判读书的对与错，没有资格评判哪本书该读。但我想一往无前的去寻找灯塔，寻找佛陀参禅的菩提，寻找扫清愚昧的拂尘，寻找高天原上荡平黑暗的天照命，寻找那伫立于宇宙中心的世界树，我想去问问那在沃达尔圣泉边不懈纺织的命运三姐妹，人的命运将飘向何方？</p>
+<p>三毛在《送你一匹马》中写到：“读书多了，容颜自然改变，许多时候，自己可能以为许多看过的书籍都成了过眼云烟，不复记忆，其实他们仍是潜在的。在气质里，在谈吐上，在胸襟的无涯，当然也可能显露在生活和文字里”，这说的是读书对自己的改变，可除了寻找灯塔、提升自我外，我想读书的意义也在于让我们交友，和书中的人物相识相知，我始终愿意相信他们真的存在，相信在我们看不见的世界某处，存在着一个或是更多的最终归宿旅店。</p>
+<p>就像《苏菲的世界》中所提及的那样，那是一个人类精神到不了的角落，是所有故事完结后，由书中人物所自由撰写的新的篇章的世界——犹如苏菲和她的哲学导师来到一个新的世界，某个陌生的老妇人对他们说：你们才来吗？这是所有书中人物在书翻完后的归宿。</p>
+<p>所以，我们可以相信唐吉诃德是真的，小林绿是真的，罗密欧真的曾在朱丽叶的窗台下歌唱，在世界尽头有独角兽的集结号吹响，有头叫拿破仑的猪在动物庄园里高声演讲，玫瑰尽情的开放在小王子的星球上。朋友，书里世界是那样丰富多彩，瑰丽莫名，走进去看一看，那将会是一场无与伦比的体验，爱丽丝不会后悔从兔子洞里进入仙境遇见疯帽子，你也不会后悔拿起一本书遇见世界、遇见自己。</p>
+<p>京戏《追鱼》里有这样一段，说是观世音问鲤鱼是要小隐还是大隐，鲤鱼问：“小隐怎的？大隐何来？”观 世音答：“大隐拔鱼鳞三片，打入凡间受苦；小隐随吾南海修行，五百年后得道成仙”。</p>
+<p>听到的那一刻，内心无比震撼，原以为随菩萨修行是修行，但比随菩萨修行级别更高的是在人间修行。</p>
+<p>确实，活于人间本就是一场大修行，可能要经历上千亿年的等待，你才终于可以来人间一趟。如果放弃阅读，放弃那场书中历险，闭上双眼，合上双耳，随波逐流，生命荒芜一片，多么让人伤感的选择。</p>
+<p>即使选择读书，我们这一生，或许最后也逃不开朝九晚五，碌碌无为的结局，或许奋力挣扎也只会退回最初的地方，但那份经历是宝贵的，是凌晨三点未眠的海棠花，在寂静的黑夜给予你动人的暖。</p>
+<p>《黑客帝国》里，雨中，smith问neo，“Why? why keep fighting? why do you persist?” neo回答：
+“Because I choose to”。</p>
+<p><strong>Why keep reading?</strong>
+<strong>Because I choose to</strong>。
+——与诸君共勉</p>
 
         </div>
 
@@ -302,9 +237,7 @@
             
             <ul class="clearfix">
                 
-                <li><a href='/tags/hugo' target="_blank">hugo</a></li>
-                
-                <li><a href='/tags/git' target="_blank">git</a></li>
+                <li><a href='/tags/reading' target="_blank">reading</a></li>
                 
             </ul>
             
