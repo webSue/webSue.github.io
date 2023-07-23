@@ -6,22 +6,22 @@
     <description>Recent content in Categories on webSue的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 19 Jul 2023 21:04:16 +0800</lastBuildDate><atom:link href="https://websue.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 21 Jul 2023 23:36:13 +0800</lastBuildDate><atom:link href="https://websue.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>tech</title>
+      <link>https://websue.github.io/categories/tech/</link>
+      <pubDate>Fri, 21 Jul 2023 23:36:13 +0800</pubDate>
+      
+      <guid>https://websue.github.io/categories/tech/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>reading</title>
       <link>https://websue.github.io/categories/reading/</link>
       <pubDate>Wed, 19 Jul 2023 21:04:16 +0800</pubDate>
       
       <guid>https://websue.github.io/categories/reading/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>tech</title>
-      <link>https://websue.github.io/categories/tech/</link>
-      <pubDate>Mon, 17 Jul 2023 21:48:59 +0800</pubDate>
-      
-      <guid>https://websue.github.io/categories/tech/</guid>
       <description></description>
     </item>
     
