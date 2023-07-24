@@ -8,12 +8,12 @@
     <language>zh-CN</language>
     <lastBuildDate>Fri, 21 Jul 2023 23:36:13 +0800</lastBuildDate><atom:link href="https://websue.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>个人建站指南（二）——Hugo&#43;Github Pages搭建实操</title>
+      <title>个人建站指南（二）—Hugo&#43;Github Pages搭建实操</title>
       <link>https://websue.github.io/post/tech/%E4%B8%AA%E4%BA%BA%E5%BB%BA%E7%AB%99%E6%8C%87%E5%8D%97%E4%BA%8C/</link>
       <pubDate>Fri, 21 Jul 2023 23:36:13 +0800</pubDate>
       
       <guid>https://websue.github.io/post/tech/%E4%B8%AA%E4%BA%BA%E5%BB%BA%E7%AB%99%E6%8C%87%E5%8D%97%E4%BA%8C/</guid>
-      <description>forward 什么是Hugo 什么是Github Pages 实操步骤</description>
+      <description>forward 什么是Hugo Hugo是由Go语言实现的静态网站生成器。简单、易用、高效、易扩展、快速部署。号称世界上最快的网站生成框架。通过 Hugo 你可以快速搭建你的静态网站，比如博客系统、文档介绍、公司主页、产品介绍等等。相对于其他静态网站生成器（例如hexo）来说，Hugo 具备如下特点： 极快的</description>
     </item>
     
     <item>
@@ -26,7 +26,7 @@
     </item>
     
     <item>
-      <title>个人博客建站指南（一）——如何拥有一间属于自己的赛博房间</title>
+      <title>个人博客建站指南（一）—如何拥有一间属于自己的赛博房间</title>
       <link>https://websue.github.io/post/tech/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%BB%BA%E7%AB%99%E6%8C%87%E5%8D%97%E4%B8%80%E5%A6%82%E4%BD%95%E6%8B%A5%E6%9C%89%E4%B8%80%E9%97%B4%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E8%B5%9B%E5%8D%9A%E6%88%BF%E9%97%B4/</link>
       <pubDate>Mon, 17 Jul 2023 21:48:59 +0800</pubDate>
       
