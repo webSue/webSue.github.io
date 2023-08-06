@@ -216,6 +216,7 @@
         <div class="post-content">
             <p>建站指南（一）见：
 <a href="https://websue.github.io/post/tech/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%BB%BA%E7%AB%99%E6%8C%87%E5%8D%97%E4%B8%80%E5%A6%82%E4%BD%95%E6%8B%A5%E6%9C%89%E4%B8%80%E9%97%B4%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E8%B5%9B%E5%8D%9A%E6%88%BF%E9%97%B4/">个人博客建站指南（一）—如何拥有一间属于自己的赛博房间 | webSue的博客</a></p>
+<hr>
 <h2 id="forward">forward</h2>
 <h4 id="什么是hugo">什么是Hugo</h4>
 <p><a href="https://gohugo.io/">The world’s fastest framework for building websites | Hugo (gohugo.io)</a></p>
@@ -242,12 +243,12 @@
 <p>1.一个Github账号</p>
 <p>2.安装Git</p>
 <h2 id="实操步骤">实操步骤</h2>
-<h4 id="第一步新建一个github仓库">第一步：新建一个Github仓库</h4>
+<h4 id="第1步新建一个github仓库">第1步：新建一个Github仓库</h4>
 <p>登录Github账号，新建一个Github repository，库名为<em><strong>username.github.io</strong></em>，username即你的Github账号用户名</p>
 <p>
         <img class="mx-auto" alt="" src="/img/setup1.png" />   
     </p>
-<h4 id="第二步安装hugo">第二步：安装Hugo</h4>
+<h4 id="第2步安装hugo">第2步：安装Hugo</h4>
 <p>Hugo官方有给出根据不同环境（Windows、Linus、macOS）的安装指南（<a href="https://gohugo.io/installation/">Installation | Hugo (gohugo.io)</a>）</p>
 <p>下面我大概介绍下Windows环境下的安装步骤，其他环境的朋友可以参见官方指南</p>
 <ol>
@@ -270,7 +271,7 @@
 </div><p>以确认 Hugo 是否安装成功（如果安装成功就能看到版本号）</p>
 <pre tabindex="0"><code class="language-mark" data-lang="mark">D:\&gt;hugo version
 hugo v0.114.0-9df2ec7988e5a217a14901cc76c0b7e76b2e9f02 windows/amd64 BuildDate=2023-06-19T17:01:43Z VendorInfo=gohugoio
-</code></pre><h4 id="第三步新建一个hugo站点">第三步：新建一个Hugo站点</h4>
+</code></pre><h4 id="第3步新建一个hugo站点">第3步：新建一个Hugo站点</h4>
 <p>进入你想存放Hugo网站文件夹的目录，我选择的是 <code>D:\hugo</code>路径下，执行以下命令新建一个Hugo网站</p>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -303,17 +304,113 @@ hugo v0.114.0-9df2ec7988e5a217a14901cc76c0b7e76b2e9f02 windows/amd64 BuildDate=2
 </span></span><span style="display:flex;"><span>└── themes             //下载的各种主题存放目录
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h4 id="第四步选择hugo主题">第四步：选择Hugo主题</h4>
+</div><h4 id="第4步关联本地hugo和github">第4步：关联本地hugo和Github</h4>
+<p>两种方式：</p>
+<p>方式1：在创建的username.github.io仓库找到git clone地址，clone到本地后在该路径下再执行第3步，后续所有操作都在克隆下的本地仓库目录里执行；</p>
+<p>方式2：在第3步已经创建好的personal-blog目录下，执行</p>
+<pre tabindex="0"><code>git init
+git remote add origin https://github.com/username/username.github.io.git
+</code></pre><p>（如果是第一次使用Git这一步不成功，大概率是没配置ssh key，本地Git仓库和GitHub仓库之间的传输是<strong>通过SSH加密传输的</strong>，可以搜索相关文章教程配置下）</p>
+<h4 id="第5步选择hugo主题">第5步：选择Hugo主题</h4>
 <p>进入到themes目录下，在<a href="https://themes.gohugo.io/">官网主题</a>中选择一款主题，git clone下来之后把<code>themes/meme/exampleSite</code>目录下的<code>config.toml</code>文件复制一份到personal-blog根目录下，修改相关的配置</p>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>git submodule add <span style="color:#900;font-weight:bold">https</span>:<span style="color:#998;font-style:italic">//github.com/budparr/gohugo-theme-ananke.git ananke        //例如选择ananke主题
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>git submodule add <span style="color:#900;font-weight:bold">https</span>:<span style="color:#998;font-style:italic">//github.com/budparr/gohugo-theme-ananke.git ananke //ananke主题
 </span></span></span></code></pre></td></tr></table>
 </div>
+</div><div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#998;font-style:italic">// 默认为：
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>baseURL <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;http://example.org/&#34;</span>
+</span></span><span style="display:flex;"><span>languageCode <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;en-us&#34;</span>
+</span></span><span style="display:flex;"><span>title <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;My New Hugo Site&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">// 修改为
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>baseURL <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;github发布出去的博客地址&#34;</span>
+</span></span><span style="display:flex;"><span>languageCode <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;en-us&#34;</span>
+</span></span><span style="display:flex;"><span>title <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;My New Hugo Site&#34;</span>
+</span></span><span style="display:flex;"><span>publishDir <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;docs&#34;</span>
+</span></span><span style="display:flex;"><span>theme <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;ananke&#34;</span>             <span style="color:#998;font-style:italic">//必须与所选主题被克隆至的目录名相同
+</span></span></span></code></pre></td></tr></table>
 </div>
+</div><p>修改了baseURL，并增加了publishDir。publishDir的修改是因为：当在content目录下新增博文.md文件后，需要执行<code>hugo </code>来用hugo把发布用的目录编译出来，而默认的编译目录名为publish，这里改成了docs，这是因为Github pages有两种存在：</p>
+<ol>
+<li>识别发布路径在master分支下的README.md或者index.html</li>
+<li>识别发布路径在master分支的/docs目录下的README.md或者index.html</li>
+</ol>
+<p>只将默认的发布目录/publish推送上去，不利于跨设备修改博客内容，因此要将整个目录都推送上去，然后将/publish改成/docs，用于让Github识别为Github pages。</p>
+<p>此外，还需要在Github repository的settings -&gt; pages中，吧Github Pages Source改为 docs目录，保存设置</p>
+<p>
+        <img class="mx-auto" alt="" src="/img/setup2.png" />   
+    </p>
+<h4 id="第6步创建一篇博文并预览">第6步：创建一篇博文并预览</h4>
+<p>personal-blog根目录下执行，创建第一篇博文</p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>hugo new post<span style="color:#000;font-weight:bold">/</span>first<span style="color:#000;font-weight:bold">-</span>blog.md
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>本地运行浏览效果</p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>hugo server <span style="color:#000;font-weight:bold">-</span>D
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>不到100ms即可生成完成，打开http://localhost:1313/，即可在本地查看搭建好的博客效果啦~</p>
+<p>（添加-D参数，可以看到处于草稿状态的博文内容在本地呈现的效果，hugo server命令则需要打开.md文件，将draft=true改为false，才能在本地呈现）</p>
+<h4 id="第7步发布文章">第7步：发布文章</h4>
+<p>当我们将博文写好了，先将文章的草稿状态，从draft=true改为false，运行生成发布内容命令并将修改推送到远程分支</p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>hugo        <span style="color:#998;font-style:italic">//运行生成发布内容命令
+</span></span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"></span>git add .
+</span></span><span style="display:flex;"><span>git commit <span style="color:#000;font-weight:bold">-</span>m <span style="color:#d14">&#34;first commit&#34;</span>
+</span></span><span style="display:flex;"><span>git push <span style="color:#000;font-weight:bold">-</span>u origin master    
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>
+<p>由于新建的远程仓库是空的，所以要加上-u这个参数</p>
+<p>git push -u origin master</p>
+</li>
+<li>
+<p>之后仓库不是空的，就不用加上-u</p>
+<p>git push origin master</p>
+</li>
+</ul>
+<hr>
+<p>至此，整个建站流程就走完啦~</p>
+<p>你只需要访问 <a href="https://username.github.io/">https://username.github.io/</a> 网址，即可看到自己的个人博客页面了，之后的博文更新只需重复第6、7步操作即可</p>
+<p>后续，你还可以寻找更合适的Hugo主题进行更换、在现有主题上修改样式、配置个人域名、配置CloudFlare使用HTTPS等进一步操作来让你的个人博客更加完善。</p>
+
         </div>
 
         
