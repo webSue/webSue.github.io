@@ -147,7 +147,11 @@
       </ul>
     </li>
     <li><a href="#前置知识">前置知识</a></li>
-    <li><a href="#实操步骤">实操步骤</a></li>
+    <li><a href="#实操步骤">实操步骤</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
   </ul>
 </nav>
     </div>
@@ -210,9 +214,12 @@
         
         
         <div class="post-content">
-            <h2 id="forward">forward</h2>
+            <p>建站指南（一）见：
+<a href="https://websue.github.io/post/tech/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%BB%BA%E7%AB%99%E6%8C%87%E5%8D%97%E4%B8%80%E5%A6%82%E4%BD%95%E6%8B%A5%E6%9C%89%E4%B8%80%E9%97%B4%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E8%B5%9B%E5%8D%9A%E6%88%BF%E9%97%B4/">个人博客建站指南（一）—如何拥有一间属于自己的赛博房间 | webSue的博客</a></p>
+<h2 id="forward">forward</h2>
 <h4 id="什么是hugo">什么是Hugo</h4>
-<p>Hugo是由Go语言实现的静态网站生成器。简单、易用、高效、易扩展、快速部署。号称世界上最快的网站生成框架。通过 Hugo 你可以快速搭建你的静态网站，比如博客系统、文档介绍、公司主页、产品介绍等等。相对于其他静态网站生成器（例如hexo）来说，Hugo 具备如下特点：</p>
+<p><a href="https://gohugo.io/">The world’s fastest framework for building websites | Hugo (gohugo.io)</a></p>
+<p>Hugo是由Go语言实现的静态网站生成器。简单、易用、高效、易扩展、快速部署。号称世界上最快的网站生成框架。通过 Hugo 你可以快速搭建你的静态网站，比如博客系统、文档介绍、公司主页、产品介绍等等。相对于其他静态网站生成器（例如hexo）来说，Hugo 具备如下特点：·</p>
 <ul>
 <li>极快的页面编译生成速度。（ ~1 ms 每页面）</li>
 <li>完全跨平台支持，可以运行在 Mac OS X, Linux, Windows, 以及更多!</li>
@@ -223,11 +230,90 @@
 </ul>
 <p>总之，Hugo，一款非常好用的静态网站生成工具。</p>
 <h4 id="什么是github-pages">什么是Github Pages</h4>
+<p><a href="https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages#user--organization-pages">About GitHub Pages - GitHub Docs</a></p>
+<p><strong>GitHub Pages</strong> 是一个静态站点托管服务，直接将个人、组织或项目的页面托管于 GitHub 库或仓库 (repository) 中。主要优点：</p>
+<ul>
+<li>搭建简单且免费，无需购买云服务器</li>
+<li>支持静态脚本</li>
+<li>可以绑定自己购买的域名，自由DIY主题</li>
+<li>托管便利，根据教程完成搭建后，后续可以专注文章创作，不需要操心系统维护、文章存储等事宜</li>
+</ul>
 <h2 id="前置知识">前置知识</h2>
-<p>1.了解Git和Github</p>
+<p>1.一个Github账号</p>
 <p>2.安装Git</p>
 <h2 id="实操步骤">实操步骤</h2>
-
+<h4 id="第一步新建一个github仓库">第一步：新建一个Github仓库</h4>
+<p>登录Github账号，新建一个Github repository，库名为<em><strong>username.github.io</strong></em>，username即你的Github账号用户名</p>
+<p>
+        <img class="mx-auto" alt="" src="/img/setup1.png" />   
+    </p>
+<h4 id="第二步安装hugo">第二步：安装Hugo</h4>
+<p>Hugo官方有给出根据不同环境（Windows、Linus、macOS）的安装指南（<a href="https://gohugo.io/installation/">Installation | Hugo (gohugo.io)</a>）</p>
+<p>下面我大概介绍下Windows环境下的安装步骤，其他环境的朋友可以参见官方指南</p>
+<ol>
+<li>打开 Hugo 官方 GitHub 的 <a href="https://github.com/gohugoio/hugo/releases"><strong>Releases</strong></a>页面</li>
+<li>选择最新的版本下载（选择  hugo_xxx_Windows-64/32bit.zip ），如果使用<code>meme</code>主题，要下载extended版本的。（请提前看好想要使用的主题是否需要extended版本支持！！比如Book主题<a href="https://themes.gohugo.io/themes/hugo-book/">Book | Hugo Themes (gohugo.io)</a>，如果等后面步骤做了一堆结果发现自己喜欢的主题hugo版本不支持就尴尬了）</li>
+<li>将压缩包内的 hugo.exe 文件解压至 <code>D:\hugo\bin</code> 文件夹目录下</li>
+<li>在 文件资源管理器（即 我的电脑）中空白处点击鼠标右键，打开属性</li>
+<li>依次点击 高级系统设置- 环境变量，双击打开系统变量中的 Path</li>
+<li>在环境变量界面中双击空白行，添加 <code>D:\hugo\bin</code>，点击确定</li>
+</ol>
+<p>打开命令提示符，输入语句：</p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>hugo version
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>以确认 Hugo 是否安装成功（如果安装成功就能看到版本号）</p>
+<pre tabindex="0"><code class="language-mark" data-lang="mark">D:\&gt;hugo version
+hugo v0.114.0-9df2ec7988e5a217a14901cc76c0b7e76b2e9f02 windows/amd64 BuildDate=2023-06-19T17:01:43Z VendorInfo=gohugoio
+</code></pre><h4 id="第三步新建一个hugo站点">第三步：新建一个Hugo站点</h4>
+<p>进入你想存放Hugo网站文件夹的目录，我选择的是 <code>D:\hugo</code>路径下，执行以下命令新建一个Hugo网站</p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>hugo new site personal<span style="color:#000;font-weight:bold">-</span>blog   <span style="color:#998;font-style:italic">// 在当前目录下创建hugo站点
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>创建后，生成的项目模板目录结构：</p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>.
+</span></span><span style="display:flex;"><span>├── archetypes         //默认，date、title等统一信息内容模板
+</span></span><span style="display:flex;"><span>├── config.toml        //配置文件
+</span></span><span style="display:flex;"><span>├── content            //所有内容页面存放目录，后续写的博文都放在这
+</span></span><span style="display:flex;"><span>├── data               //数据模板目录
+</span></span><span style="display:flex;"><span>├── layouts            //布局模板文件目录，存放.html布局模板文件
+</span></span><span style="display:flex;"><span>├── static             //静态资源存放目录，图片可以统一放在这
+</span></span><span style="display:flex;"><span>└── themes             //下载的各种主题存放目录
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="第四步选择hugo主题">第四步：选择Hugo主题</h4>
+<p>进入到themes目录下，在<a href="https://themes.gohugo.io/">官网主题</a>中选择一款主题，git clone下来之后把<code>themes/meme/exampleSite</code>目录下的<code>config.toml</code>文件复制一份到personal-blog根目录下，修改相关的配置</p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>git submodule add <span style="color:#900;font-weight:bold">https</span>:<span style="color:#998;font-style:italic">//github.com/budparr/gohugo-theme-ananke.git ananke        //例如选择ananke主题
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
         </div>
 
         
@@ -436,10 +522,6 @@ div.highlight:hover .copy-code,pre:hover .copy-code {
     
     <li>
         <a href="https://websue.github.io/post/tech/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%BB%BA%E7%AB%99%E6%8C%87%E5%8D%97%E4%B8%80%E5%A6%82%E4%BD%95%E6%8B%A5%E6%9C%89%E4%B8%80%E9%97%B4%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E8%B5%9B%E5%8D%9A%E6%88%BF%E9%97%B4/" title="个人博客建站指南（一）—如何拥有一间属于自己的赛博房间" target="_blank">个人博客建站指南（一）—如何拥有一间属于自己的赛博房间</a>
-    </li>
-    
-    <li>
-        <a href="https://websue.github.io/post/test/" title="Test" target="_blank">Test</a>
     </li>
     
 </ul>
